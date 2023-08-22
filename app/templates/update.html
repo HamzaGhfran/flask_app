@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update</title>
+</head>
+<body>
+    <ul>
+        {% for product in products %}
+         <li>{{product}}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for("update")}}" method="POST">
+        <input type="text" id="update1" name="current" placeholder="where to update"> 
+        <input type="text" id="update2" name = "new" placeholder="Update todo">
+        <input type="radio" id="Pending" name="status" value="Pending">
+        <label for="pending">Pending</label>
+        <input type="radio" id="Done" name="status" value="Done">
+        <label for="Done">Done</label>
+        <button type="submit">Update</button>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>project using flask</title>
+</head>
+<body>
+    <div class="contaier">
+        <div class="header teal">
+            <h1>Add Your Todo list</h1>
+        </div>
+
+    <form action="{{ url_for("AddTasks") }}" method="post">
+        <label for="todo">TODO:</label>
+        <input type="text" id="td" name="todos" placeholder="Add todo">
+        <label for="Status">STATUS</label>
+        <input type="radio" id="Pending" name="status" value="Pending">
+        <label for="pending">Pending</label>
+        <input type="radio" id="Done" name="status" value="Done">
+        <label for="Done">Done</label>
+        <button type="submit">Add</button>
+    <a href="/display">Display</a>
+    <a href="/update">Update</a>
+</div>
+
+</body>
+</html>
