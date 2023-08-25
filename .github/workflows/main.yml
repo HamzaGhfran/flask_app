@@ -36,7 +36,7 @@ jobs:
           context: .
           file: ./db/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME}}/flask_app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME}}/my_sql:latest
           
         
           
