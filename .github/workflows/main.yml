@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flusk_app:latest
       -
         name: build and push mysql image
         uses: docker/build-push-action@v4
@@ -36,7 +36,7 @@ jobs:
           context: .
           file: ./db/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME}}/flask_app:latest
           
         
           
