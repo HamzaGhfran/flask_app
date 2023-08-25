@@ -26,7 +26,17 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker-compose.yml
+          file: ./app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}
+      -
+        name: build and push
+        uses: docker/build-push-action@4
+        with:
+          context: .
+          file: ./db/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME}}
+          
+        
           
