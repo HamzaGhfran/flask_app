@@ -3,6 +3,7 @@ WORKDIR /app
 RUN echo "NEW FILE"
 
 COPY ./db/ /app/
+RUN touch /app/abc.txt
 RUN ls /app
 RUN ls /app/
 RUN ls app/
