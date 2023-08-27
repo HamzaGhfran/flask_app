@@ -1,10 +1,8 @@
 FROM mysql:latest
-WORKDIR  app
-RUN touch /app/dummy22.txt
+WORKDIR /app
+RUN echo "NEW FILE"
 
-RUN ECHO "NEW FILE"
-
-COPY db/ app/
+COPY db/ /app/
 RUN ls /app
 RUN ls /app/
 RUN ls app/
