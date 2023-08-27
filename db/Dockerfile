@@ -1,6 +1,6 @@
 FROM mysql:latest
 WORKDIR  /app
-COPY  user.sql /app/user.sql
+COPY  db/user.sql /app/user.sql
 
 RUN ls /app/
 
