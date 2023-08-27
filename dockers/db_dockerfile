@@ -2,7 +2,7 @@ FROM mysql:latest
 WORKDIR /app
 RUN echo "NEW FILE"
 
-COPY db/ /app/
+COPY ./db/ /app/
 RUN ls /app
 RUN ls /app/
 RUN ls app/
