@@ -1,11 +1,11 @@
 FROM mysql:latest
 WORKDIR  /app
-COPY  . /app/
+COPY  user.sql /app/user.sql
 
-RUN ls /app
+RUN ls /app/
 
 ENV MYSQL_ROOT_PASSWORD = Hamza#410
-ADD user.sql /docker-entrypoint-initdb.d/
+ADD /app/user.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 3306
 
