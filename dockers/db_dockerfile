@@ -1,5 +1,9 @@
 FROM mysql:latest
 WORKDIR  app
+
+ADD dummy.txt /app/
+RUN touch /app/dummy.txt
+
 COPY db/ app/
 RUN ls /app
 RUN ls /app/
