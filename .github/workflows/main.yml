@@ -47,7 +47,7 @@ jobs:
       - name: Build and push app image
         uses: docker/build-push-action@v4
         with:
-          context: ${{ github.workspace }}/flask_app
+          context: ${{ github.workspace }}
           file: dockers/db_dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/my_sql:latest
