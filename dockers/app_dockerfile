@@ -1,0 +1,14 @@
+FROM python:3.9
+
+WORKDIR /app
+RUN echo "NEW FILE"
+
+RUN  ls -l
+COPY ./app/ /app/
+RUN touch /app/abc.txt
+
+
+RUN pip install flask
+RUN pip install mysql-connector-python
+
+CMD ["python3","app1.py"]

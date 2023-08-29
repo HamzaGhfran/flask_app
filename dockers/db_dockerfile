@@ -1,14 +1,4 @@
 FROM mysql:latest
-WORKDIR /app
-RUN echo "NEW FILE"
 
-COPY ./db/ /app/
-RUN touch /app/abc.txt
-RUN ls /app
-RUN ls /app/
-RUN ls app/
-
-ENV MYSQL_ROOT_PASSWORD = Hamza#410
-ADD app/user.sql /docker-entrypoint-initdb.d/
-
-EXPOSE 3306
+ENV MYSQL_ROOT_PASSWORD=root
+COPY  db/user.sql /docker-entrypoint-initdb.d/

@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./app/Dockerfile
+          file: dockers/app_dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/flusk_app:latest
   db:

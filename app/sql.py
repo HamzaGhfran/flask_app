@@ -1,6 +1,6 @@
 import mysql.connector
 
-mydb = mysql.connector.connect(host="db", user = "root", password = "Hamza#410", port = "3306", database = "mytodos")
+mydb = mysql.connector.connect(host="172.17.0.2", user = "root", password = "root", port = "3306", database = "mytodos")
 
 def insert(todo,status):
     mycursor = mydb.cursor()
